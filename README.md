@@ -6,7 +6,7 @@ A terraform module to provide a simple AWS RDS database bootstrap
 
 What it does:
 - creates a micro EC2 ephemeral instance when RDS is provisioned
-- via this instance, connects to the cluster and run boostrap scripts
+- via this instance, connects to the cluster and run boostrap SQL scripts
 - then kill this ephemeral instance.
 
 It allows you to easily embed automated DB provisioning in your infrastructure building process.
