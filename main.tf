@@ -28,7 +28,7 @@ data "template_file" "shell_script" {
 
 # Prepare MySQL script
 data "template_file" "mysql_script" {
-  template = "${var.mysql_script}"
+  template = "${var.sql_script}"
 
   vars {
     DATABASE_NAME     = "${var.database}"
