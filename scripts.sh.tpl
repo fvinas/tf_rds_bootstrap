@@ -14,7 +14,7 @@ mysql 	--host=${DATABASE_ENDPOINT} \
 		--port=${DATABASE_PORT} \
 		--user=${DATABASE_USER} \
 		--password='${DATABASE_PASSWORD}' \
-		${DATABASE_NAME}
+		${DATABASE_NAME} \
 		< /tmp/mysql-query.sql
 
 # Hara-kiri (since instance_initiated_shutdown_behavior = "terminate")
