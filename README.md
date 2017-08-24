@@ -18,6 +18,7 @@ Module Input Variables
 - `name` - the base name used on all module resources as an identifier (default `RDS_BOOSTRAP_EPHEMERAL`)
 - `subnet_id` - the subnet in which the ephemeral instance will be launched
 - `security_group_ids` - a list of security groups the ephemeral instance will belong to (use it to allow access to the RDS cluster), default `[]`
+- `iam_instance_profile` - instance profile name that will be used by the bootstrap instance
 - `endpoint` - your RDS connection endpoint
 - `port` - your RDS connection port
 - `master_username` - your RDS cluster master user name

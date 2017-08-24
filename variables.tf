@@ -13,6 +13,11 @@ variable "security_group_ids" {
   default     = []
 }
 
+variable "iam_instance_profile" {
+  description = "Instance profile name that will be used by the bootstrap instance"
+  default     = ""
+}
+
 variable "endpoint" {
   description = "RDS connection endpoint"
   default     = ""

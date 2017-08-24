@@ -53,7 +53,7 @@ data "template_file" "user_data" {
 resource "aws_instance" "ephemeral_instance" {
   subnet_id              = "${var.subnet_id}"
   instance_type          = "${var.instance_type}"
-  iam_instance_profile   = "${aws_iam_instance_profile.ec2-assumerole-profile.name}"
+  iam_instance_profile   = "${var.iam_instance_profile}"
   ami                    = "${data.aws_ami.ephemeral_instance_ami.id}"
   vpc_security_group_ids = ["${var.security_group_ids}"]
   user_data              = "${data.template_file.user_data.rendered}"
