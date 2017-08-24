@@ -7,7 +7,7 @@ ${SHELL_SCRIPT}
 EOF
 
 cat <<EOF >>/tmp/mysql-query.sql
-${MYSQL_QUERY}
+${MYSQL_SCRIPT}
 EOF
 
 mysql 	--host=${DATABASE_ENDPOINT} \
