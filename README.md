@@ -25,7 +25,7 @@ Module Input Variables
 - `master_password` - your RDS cluster master user password
 - `database` - your database name
 - `shell_script` - (optional) a shell script template that will be run from the ephemeral instance (details below)
-- `mysql_script` - (optional) a SQL script that will be run from the ephemeral instance against a MySQL/Aurora RDS DB
+- `sql_script` - (optional) a SQL script that will be run from the ephemeral instance against a MySQL/Aurora RDS DB
 - `instance_type` - (optional, default `t2.micro`) ephemeral instance type
 
 Usage
@@ -47,7 +47,7 @@ module "rds_boostrap" {
   master_username = "${aws_rds_cluster.aurora_cluster.master_username}"
   master_password = "${var.rds_master_password}"
 
-  mysql_script = <<-EOF
+  sql_script = <<-EOF
               CREATE TABLE my_table (
                 ...
               );
