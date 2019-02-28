@@ -18,4 +18,4 @@ mysql 	--host=${DATABASE_ENDPOINT} \
 		< /tmp/mysql-query.sql
 
 # Hara-kiri (since instance_initiated_shutdown_behavior = "terminate")
-shutdown
+shutdown now
