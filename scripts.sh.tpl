@@ -1,6 +1,4 @@
 #!/bin/bash
-yum -y update
-yum -y install mysql
 
 cat <<EOF | bash
 ${SHELL_SCRIPT}

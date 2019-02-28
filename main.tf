@@ -1,15 +1,16 @@
 # Last Amazon Linux
 data "aws_ami" "ephemeral_instance_ami" {
   most_recent = true
+  owners = ["679593333241"]
 
   filter {
     name   = "name"
-    values = ["amzn-ami-hvm*-x86_64-gp2"]
+    values = ["mysql56*"]
   }
 
   filter {
     name   = "owner-id"
-    values = ["137112412989"]
+    values = ["679593333241"]
   }
 }
 
