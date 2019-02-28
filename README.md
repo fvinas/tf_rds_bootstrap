@@ -27,6 +27,8 @@ Module Input Variables
 - `shell_script` - (optional) a shell script template that will be run from the ephemeral instance (details below)
 - `sql_script` - (optional) a SQL script that will be run from the ephemeral instance against a MySQL/Aurora RDS DB
 - `instance_type` - (optional, default `t2.micro`) ephemeral instance type
+- `ami_name_filter` - (optional, default `amzn-ami-hvm*-x86_64-gp2`) name to filter on for the ephemeral instance
+- `ami_owner_id_filter` - (optional, default `137112412989` i.e. AWS) OwnerID to filter on for the ephemeral instance
 
 Usage
 -----
@@ -62,7 +64,7 @@ For Terraform version older than 0.7.0 use `ref=v1.0.0`:
 Outputs
 =======
 
-None
+- `ephemeral_instance_ami` - AMI used for the ephemeral instance
 
 TODO
 ====
