@@ -1,5 +1,8 @@
 #!/bin/bash
 
+yum -y update
+yum -y install mysql
+
 cat <<EOF | bash
 ${SHELL_SCRIPT}
 EOF
@@ -16,4 +19,5 @@ mysql 	--host=${DATABASE_ENDPOINT} \
 		< /tmp/mysql-query.sql
 
 # Hara-kiri (since instance_initiated_shutdown_behavior = "terminate")
-shutdown now
+# let the system finish full bootup
+shutdown -h now+1min 
