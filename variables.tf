@@ -57,3 +57,14 @@ variable "instance_type" {
   description = "Ephemeral instance type"
   default     = "t2.micro"
 }
+
+variable "ami_name_filter" {
+  description = "Name to filter on for AMI"
+  default = "amzn-ami-hvm*-x86_64-gp2"
+}
+
+variable "ami_owner_id_filter" {
+  description = "OwnerID (one) to filter on for AMI"
+  default = "137112412989"
+}
+

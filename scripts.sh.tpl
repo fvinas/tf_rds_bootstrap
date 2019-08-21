@@ -1,4 +1,5 @@
 #!/bin/bash
+
 yum -y update
 yum -y install mysql
 
@@ -18,4 +19,5 @@ mysql 	--host=${DATABASE_ENDPOINT} \
 		< /tmp/mysql-query.sql
 
 # Hara-kiri (since instance_initiated_shutdown_behavior = "terminate")
-shutdown
+# let the system finish full bootup
+shutdown -h now+1min 
